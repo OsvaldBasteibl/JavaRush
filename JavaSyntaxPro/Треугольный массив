@@ -1,0 +1,24 @@
+//Создай треугольный массив, где значение каждого элемента — это сумма его индексов.
+//Требования:
+//В методе main(String[]) двумерный массив result заполни числами согласно условию.
+//Выведенный текст должен содержать 10 строк.
+//Выведенные числа должны соответствовать условию.
+//Решение
+public class TriangularArray {
+    public static int[][] result = new int[10][];
+    public static void main(String[] args) {
+        for(int i = 0; i < result.length; i++){
+            result[i] = new int[i+1];
+            for(int j = 0; j < result[i].length; j++){
+                result[i][j] = i + j;
+            }
+        }
+
+        for (int i = 0; i < result.length; i++){
+            for (int j = 0; j < result[i].length; j++){
+                System.out.print(result[i][j] + " ");
+            }
+            System.out.println("");
+        }
+    }
+}
